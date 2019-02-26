@@ -6,7 +6,7 @@ import {BookDetail} from '../book-detail';
   styleUrls: ['./book.component.scss'],
 })
 export class BookComponent implements OnInit {
-  bd :BookDetail;
+  bookDetail :BookDetail;
   constructor() { }
 
   ngOnInit() {}
