@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {BookDetail} from '../book-detail';
+import { BookDetail } from '../book-detail';
 @Component({
   selector: 'app-book',
   templateUrl: './book.component.html',
@@ -9,6 +9,8 @@ export class BookComponent implements OnInit {
   bookDetail :BookDetail;
   constructor() { }
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.bookDetail = {id:1,name:"test",imageUrl:"./../assets/35300.jpg"};
+  }
 
 }
