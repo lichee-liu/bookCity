@@ -24,3 +24,6 @@
 ##一周小结
 初步完成angular 学习
 ##day5
+1，寻找ionic相关资料。
+2，完成ionic初步认识与学习。
+3，完成vscode github 搭建。
