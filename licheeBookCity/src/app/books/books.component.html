@@ -1,9 +1,10 @@
-<table>
-  <tr *ngFor="let item of books">
-  <td *ngFor="let i of row">
-    <div>
-      <img src={{item.imageUrl}}><br>
-      <label>{{item.name}}</label>
+<table width="100%">
+  <tr *ngFor="let i of column;let n = index">
+  <td *ngFor="let j of row;let m = index"  style="padding: 5px;">
+    
+    <div *ngIf="(n+1)*(m+1)-1 < books.length">
+      <img src={{books[(n+1)*(m+1)-1].imageUrl}}><br>
+      <label>{{books[(n+1)*(m+1)-1].name}}</label>
     </div>
   </td>
   </tr>

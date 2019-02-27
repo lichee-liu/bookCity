@@ -7,12 +7,28 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BooksComponent implements OnInit {
   row : any = [];
-  books:any = [];
+  books:Array<Book> = [];
+  column :any = [];
   constructor() { }
 
   ngOnInit() {
     this.row.push(1,2,3);
-    this.books.push({id:1,name:'回到明朝当王爷',imageUrl:"../assets/35300.jpg"});
+
+    for(let i = 0 ; i < 20 ;i++){
+      this.books.push({id:i.toString(),name:'回到明朝当王爷',imageUrl:"../assets/35300.jpg"});
+    }
+    
+    for(let i =1 ;i < this.books.length/this.row.length + 1;i++){
+      this.column.push(i);
+    }
+    console.log(' this.column',  this.column.length);
+    console.log('this.row', this.row.length);
   }
 
+
+}
+export interface Book{
+  id:string;
+  name:string;
+  imageUrl:string;
 }
