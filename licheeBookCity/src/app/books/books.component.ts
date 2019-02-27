@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import {Router} from '@angular/router';
 @Component({
   selector: 'app-books',
   templateUrl: './books.component.html',
@@ -9,7 +9,7 @@ export class BooksComponent implements OnInit {
   row : any = [];
   books:Array<Book> = [];
   column :any = [];
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
     this.row.push(1,2,3);
@@ -24,8 +24,10 @@ export class BooksComponent implements OnInit {
     console.log(' this.column',  this.column.length);
     console.log('this.row', this.row.length);
   }
-
-
+  pressEvent($event){
+    console.log('test', 'press');
+    this.router.navigate(['/detail']);
+  }
 }
 export interface Book{
   id:string;
