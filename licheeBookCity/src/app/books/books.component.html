@@ -1,0 +1,10 @@
+<table>
+  <tr *ngFor="let item of books">
+  <td *ngFor="let i of row">
+    <div>
+      <img src={{item.imageUrl}}><br>
+      <label>{{item.name}}</label>
+    </div>
+  </td>
+  </tr>
+</table>
