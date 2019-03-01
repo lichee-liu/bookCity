@@ -24,9 +24,11 @@ export class BooksComponent implements OnInit {
     console.log(' this.column',  this.column.length);
     console.log('this.row', this.row.length);
   }
-  pressEvent($event){
-    console.log('test', 'press');
-    this.router.navigate(['/detail']);
+  pressEvent($event,id){
+    console.log('test', this.books[id]);
+    
+    this.router.navigate(['/book-detail'],{queryParams:{book :JSON.stringify(this.books[id])}});//,{queryParams:{id:id}}
+   // this.router.navigateByUrl('/book-detail',{queryParams:{id : "1"}});
   }
 }
 export interface Book{

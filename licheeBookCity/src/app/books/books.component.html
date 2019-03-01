@@ -2,9 +2,9 @@
   <tr *ngFor="let i of column;let n = index">
   <td *ngFor="let j of row;let m = index"  style="padding: 5px;">
     
-    <div *ngIf="(n+1)*(m+1)-1 < books.length" (click)="pressEvent($event)"  (press)="pressEvent($event)">
-      <img src={{books[(n+1)*(m+1)-1].imageUrl}}><br>
-      <label>{{books[(n+1)*(m+1)-1].name}}</label>
+    <div *ngIf="m+n*3 < books.length" (click)="pressEvent($event,books[m+n*3].id)"  (press)="pressEvent($event)">
+      <img src={{books[m+n*3].imageUrl}}><br>
+      <label>{{books[m+n*3].name}}</label>
     </div>
   </td>
   </tr>

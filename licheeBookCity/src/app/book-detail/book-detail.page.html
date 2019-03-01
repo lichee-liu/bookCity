@@ -1,9 +1,19 @@
 <ion-header>
   <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button
+          [icon]="buttonIcon">
+      </ion-back-button>
+    </ion-buttons>
     <ion-title>书籍详情</ion-title>
+    <ion-buttons slot="end">
+        <ion-button href="/tabs/tab2">
+            <ion-icon slot="icon-only" name="appstore"></ion-icon>
+        </ion-button>
+      </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
 <ion-content padding>
-
+{{book.name}}
 </ion-content>
