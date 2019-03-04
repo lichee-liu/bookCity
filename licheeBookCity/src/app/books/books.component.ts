@@ -15,7 +15,7 @@ export class BooksComponent implements OnInit {
     this.row.push(1,2,3);
 
     for(let i = 0 ; i < 20 ;i++){
-      this.books.push({id:i.toString(),name:'回到明朝当王爷',imageUrl:"../assets/35300.jpg"});
+      this.books.push({id:i.toString(),name:'回到明朝当王爷',imageUrl:"../assets/35300.jpg",auth:"测试",description:"测试描述",score:null,updateDate:null,status:"已完结",type:"历史"});
     }
     
     for(let i =1 ;i < this.books.length/this.row.length + 1;i++){
@@ -35,4 +35,10 @@ export interface Book{
   id:string;
   name:string;
   imageUrl:string;
+  auth:string;
+  description:string;
+  score:string;
+  updateDate:Date;
+  type:string;
+  status:String;
 }

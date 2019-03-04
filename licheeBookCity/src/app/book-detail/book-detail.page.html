@@ -5,7 +5,7 @@
           [icon]="buttonIcon">
       </ion-back-button>
     </ion-buttons>
-    <ion-title>书籍详情</ion-title>
+    <ion-title>{{book.name}}</ion-title>
     <ion-buttons slot="end">
         <ion-button href="/tabs/tab2">
             <ion-icon slot="icon-only" name="appstore"></ion-icon>
@@ -15,5 +15,38 @@
 </ion-header>
 
 <ion-content padding>
-{{book.name}}
+  <table width="100%">
+    <tr>
+      <td rowspan="5" width="42%" >
+        <div>
+        <img src={{book.imageUrl}}><br>
+        {{book.name}}
+        </div>
+      </td>
+      <td width="58%">
+        作者:{{book.auth}}
+      </td>
+    </tr>
+    <tr><td>类别:{{book.type}}</td></tr>
+    <tr><td>状态:{{book.status}}</td></tr>
+    <tr><td>更新时间:{{book.updateDate}}</td></tr>
+    <tr><td>评分:{{book.score}}</td></tr>
+    <tr><td colspan="2">
+        <ion-buttons slot="start">
+          <ion-button (click)="onClick()">
+            <ion-icon slot="start" name="add"></ion-icon>
+            Click me
+          </ion-button>
+          <ion-button (click)="onClick()">
+              <ion-icon slot="end" name="add"></ion-icon>
+              Click me
+            </ion-button>
+          <ion-button (click)="onClick()">
+              <ion-icon slot="end" name="add"></ion-icon>
+                Click me
+          </ion-button>
+        </ion-buttons>
+
+    </td></tr>
+  </table>
 </ion-content>
