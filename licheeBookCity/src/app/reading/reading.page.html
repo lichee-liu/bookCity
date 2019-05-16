@@ -1,4 +1,31 @@
-<ion-content padding>
-<div><p>{{title}}</p></div>
-
+<ion-header *ngIf="onclickScreen">
+    <ion-toolbar>
+        <ion-buttons slot="start">
+                <ion-button slot="icon-only" href="/tabs/tab1">
+                   <i class="iconfont  iconfanhui"></i>
+                </ion-button>
+        </ion-buttons>
+        <ion-buttons slot="end">
+                <ion-button href="/tabs/tab2">
+                  <i class="iconfont  iconyixianshi-17"></i>
+                </ion-button>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+<ion-content padding="0px">
+<div id="chapter-title"><span>{{book.name}}</span></div>
+<div id="left-up"  (click)="up($event,book.id)" ></div>
+<div id="right-down"  (click)="down($event,book.id)" ></div>
+<div id="center-menu" (click)="showMenu($event,book.id)" ></div>
+<div id="footer"  *ngIf="onclickScreen" >
+    <div id="chapterController" >
+        <i class="iconfont iconyixianshi-7 left-chapter-up"></i>
+        <span class="left-chapter-text">{{book.name}}</span><i class="iconfont iconyixianshi-8 right-chapter-down"></i>
+    </div>
+</div>
 </ion-content>
+<!-- <ion-footer  *ngIf="onclickScreen">
+    <ion-toolbar>
+        <ion-title>Footer</ion-title>
+    </ion-toolbar>
+</ion-footer> -->

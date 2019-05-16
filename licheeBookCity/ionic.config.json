@@ -1,5 +1,7 @@
 {
   "name": "licheeBookCity",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }

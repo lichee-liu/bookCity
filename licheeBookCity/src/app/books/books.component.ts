@@ -26,8 +26,9 @@ export class BooksComponent implements OnInit {
   }
   pressEvent($event,id){
     console.log('test', this.books[id]);
-    
-    this.router.navigate(['/book-detail'],{queryParams:{book :JSON.stringify(this.books[id])}});//,{queryParams:{id:id}}
+    this.router.navigate(['/reading'],{queryParams:{book :JSON.stringify(this.books[id])}});
+    //,{queryParams:{id:id}}
+    //this.router.navigate(['/book-detail'],{queryParams:{book :JSON.stringify(this.books[id])}});//,{queryParams:{id:id}}
    // this.router.navigateByUrl('/book-detail',{queryParams:{id : "1"}});
   }
 }

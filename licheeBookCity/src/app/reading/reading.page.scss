@@ -1,0 +1,60 @@
+#chapter-title {
+    position: fixed;
+    top: 5px;
+    left: 5px;
+    font-size: 12px;
+}
+
+#left-up{
+    position: fixed;
+    width: 50%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+}
+
+#right-down{
+    position: fixed;
+    width: 50%;
+    height: 100%;
+    top: 0px;
+    left: 50%;
+}
+
+#center-menu{
+    position: fixed;
+    width: 50%;
+    height: 50%;
+    top: 25%;
+    z-index: 999;
+    left: 25%;
+}
+#footer{
+    position: fixed;
+    bottom: 100px;
+    border-top: solid 1px;
+    width: 100%;
+    left: 0px;
+}
+#chapterController{
+    position: relative;
+    height: 30px;
+    //text-align: center;
+    line-height: 30px;
+}
+.left-chapter-text{
+    position: relative;
+    left:40px;
+}
+.left-chapter-up{
+    position: absolute;
+    left: 0px;
+    height: 30px;
+    line-height: 30px;
+}
+.right-chapter-down{
+    position: absolute;
+    right: 0px;
+    height: 30px;
+    line-height: 30px;
+}
